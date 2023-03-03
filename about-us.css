@@ -1,0 +1,251 @@
+body {
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* HEADER */
+
+.header {
+    display: grid;
+    grid-template-areas:
+    "head nav"
+    "button button";
+    margin: 1rem 2rem;
+    gap: 1rem;
+    /* border: 1px solid black; */
+}
+
+.brand-container {
+    grid-area: head;
+}
+
+.header-brand {
+    color: #354463;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    /* width: 80s%; */
+    /* border: 1px solid red; */
+}
+
+.header-nav {
+    display: inline-flex;
+    justify-content: flex-end;
+    grid-area: nav;
+    align-self: center;
+    /* border: 1px solid red; */
+}
+
+.nav-items {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items li {
+    margin: 1rem 0;
+}
+
+.nav-items li a {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #354463;
+    font-weight: lighter;
+}
+
+.header-donation {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    grid-column: span 2;
+    /* border: 1px solid black; */
+    margin-bottom: 1rem;
+}
+
+.donation-btn {
+    background-color: #C1F7D5;
+    color: #354463;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5rem;
+    padding: 1rem 4rem;
+}
+
+/* MAIN SECTION */
+
+.main-issue {
+    background-image: url(./assets/about-us/annie-spratt-427339-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40%;
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.main-title {
+    display: inline-block;
+    font-family: "flood-std", sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem;
+    width: 50%;
+}
+
+.main-card {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    margin: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.main-card-title {
+    display: inline-block;
+    background-color: #354463;
+    color: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: -2.5rem;
+    right: calc(50% - 3.7rem);
+}
+
+.main-card-text {
+    width: 70%;
+    color: #354463;
+    text-align: center;
+    margin: 1rem auto 0 auto;
+    line-height: 1.75rem;
+}
+
+/* Responsive design for tablet */
+@media screen and (min-width: 768px) {
+    .header {
+        grid-template-areas:
+        "head head button"
+        "nav nav button";
+        margin: 0.5rem 4rem;
+    }
+    .header-brand {
+        font-size: 1.375rem;
+    }
+    .header-nav {
+        display: inline-block;
+    }
+
+    .header-donation {
+        grid-column: auto;
+        grid-row: span 2;
+        margin-bottom: 0;
+    }
+
+    .donation-btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+    }
+
+    .nav-items {
+        margin-bottom: 1rem;
+    }
+
+    .nav-items li {
+        display: inline;
+        margin-right: 2rem;
+    }
+
+    .main-issue {
+        justify-content: flex-start;
+        padding: 2rem;
+        flex-direction: row;
+        row-gap: 3rem;
+        /* height: inherit; */
+    }
+
+    .main-title {
+        /* border: 1px solid red; */
+        width: 40%;
+        margin: 1rem 2rem;
+    }
+
+    .main-card {
+        /* display: flex; */
+        padding: 3rem;
+        text-align: left;
+    }
+
+    .main-card-title {
+        padding: 1rem 3rem;
+        /* position: absolute; */
+        right: 70%;
+    }
+
+    .main-card-text {
+        width: 100%;
+        text-align: left;
+        /* border: 1px solid black; */
+        font-size: 1.75rem;
+        /* color: #354463; */
+        margin: 1rem 0;
+    }
+
+}
+
+
+/* Responsive design for desktop*/
+@media screen and (min-width: 1024px) {
+    .header {
+        grid-template-areas: "head nav nav button";
+        align-items: center;
+    }
+
+    .header-donation {
+        grid-row: auto;
+    }
+
+    .header-nav {
+        justify-self: flex-end;
+        grid-column: span 2;
+        width: 95%;
+    }
+
+    .nav-items {
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .main-issue {
+        border: 1px solid black;
+        column-gap: 3rem;
+        padding: 4rem;
+        /* height: 40rem; */
+        position: relative;
+    }
+
+    .main-issue > div {
+        /* order: 1; */
+        width: 30%;
+    }
+
+    .main-title {
+        font-size: 4rem;
+    }
+
+    .main-card {
+        /* border: 1px solid green; */
+        position: absolute;
+        right: 5.5rem;
+        bottom: -6rem;
+        /* z-index: 1; */
+        /* width: 45%; */
+    }
+
+    .main-card-title {
+        right: 55%;
+    }
+}

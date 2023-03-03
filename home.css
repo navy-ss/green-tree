@@ -1,0 +1,49 @@
+body {
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* HEADER */
+
+.header {
+    display: grid;
+    grid-template-areas:
+    "head nav"
+    "button button";
+    margin: 1rem 2rem;
+    gap: 1rem;
+    /* border: 1px solid black; */
+}
+
+.brand-container {
+    grid-area: head;
+}
+
+.header-brand {
+    color: #354463;
+    font-size: 1.75rem;
+    width: 50%;
+    /* border: 1px solid red; */
+}
+
+.header-nav {
+    display: inline-flex;
+    justify-content: flex-end;
+    grid-area: nav;
+    align-self: center;
+    /* border: 1px solid red; */
+}
+
+.nav-items {
+    list-style: none;
+    /* display: inline-block;
+    padding: 0;
+    margin: 0; */
+}
+.nav-items li {
+    margin: 1rem 0;
+}
+.nav-items li a {
+    
+}
