@@ -29,6 +29,7 @@ body {
 main {
     background: url("../assets/donation/annie-spratt-427340-unsplash@2x.png");
     background-size: cover;
+    background-position: center;
     border: 1px solid green;
 }
 
