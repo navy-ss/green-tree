@@ -300,7 +300,9 @@ body {
 
 .take-action-container {
     display: flex;
-    overflow: scroll;
+    overflow: auto;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
     margin: 0px 8%;
 }
 
